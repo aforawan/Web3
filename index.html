@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>LAPORAN TEORI</title>
+  <style>
+    /* TAMPILAN RAPI (estetik) */
+    body.rapi {
+      background-color: #fff8f6;
+      color: #2c2c2c;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .rapi .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+      background-color: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    .rapi h1 {
+      text-align: center;
+      color: maroon;
+      margin-bottom: 10px;
+    }
+
+    .rapi h2 {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .rapi h3 {
+      cursor: pointer;
+      color: maroon;
+      background-color: #fce8e6;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .rapi h3:hover {
+      background-color: #f3d3d0;
+    }
+
+    .rapi .isi {
+      padding: 10px 15px;
+      background-color: #fffafa;
+      border-left: 4px solid maroon;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .rapi .switch-mode {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .rapi .switch-mode button {
+      background-color: maroon;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .rapi .switch-mode button:hover {
+      background-color: #a30000;
+    }
+
+    /* TAMPILAN JELEK (berantakan) */
+    body.berantakan {
+      background-color: #ff00ff;
+      color: lime;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    .berantakan .container {
+      margin: 0;
+      padding: 10px;
+      background-color: yellow;
+      border: 5px dashed red;
+    }
+
+    .berantakan h1 {
+      font-size: 50px;
+      color: green;
+      text-align: left;
+      background-color: cyan;
+    }
+
+    .berantakan h2 {
+      font-size: 30px;
+      color: orange;
+      background-color: purple;
+      text-align: right;
+    }
+
+    .berantakan h3 {
+      font-size: 24px;
+      color: blue;
+      background-color: black;
+      padding: 5px;
+      border: 3px dotted hotpink;
+      margin-top: 5px;
+      text-align: center;
+    }
+
+    .berantakan .isi {
+      background-color: #00ffff;
+      color: red;
+      font-weight: bold;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: 4px double green;
+    }
+
+    .berantakan .switch-mode {
+      text-align: left;
+      margin: 10px;
+    }
+
+    .berantakan .switch-mode button {
+      background-color: black;
+      color: yellow;
+      border: 4px solid red;
+      font-size: 20px;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body class="rapi">
+  <div class="container">
+    <h1>LAPORAN TEORI</h1>
+    <h2>Nama: Muhammad Irawan Siswanto | NIM: 202332064</h2>
+
+    <div class="switch-mode">
+      <button onclick="toggleMode()">Ganti Mode Tampilan</button>
+    </div>
+
+    <h3 onclick="toggleContent(this)">1. Mengapa menggunakan CSS dan JavaScript dalam pemrograman web?</h3>
+    <div class="isi">
+      <p>•	CSS (Cascading Style Sheets) digunakan untuk mengatur tampilan visual (seperti warna, font, tata letak) pada halaman web, sementara JavaScript digunakan untuk menambahkan interaktivitas dan fungsi dinamis (seperti animasi, validasi formulir, dll.) pada halaman web.</p>
+    </div>
+
+    <h3 onclick="toggleContent(this)">2.Bagaimana CSS dan JavaScript dapat diintegrasikan dalam pemrograman web</h3>
+    <div class="isi">
+      <p>•	CSS (Cascading Style Sheets) dan JavaScript dapat diintegrasikan dalam pemrograman web untuk mengontrol tampilan dan interaktivitas halaman web.</p>
+    </div>
+
+    <h3 onclick="toggleContent(this)">3.Jelaskan apa saja keuntungan menggunakan JavaScipt dan CSS?</h3>
+    <div class="isi">
+      <p>•	Menggunakan JavaScript dan CSS memberikan banyak keuntungan dalam pengembangan web, termasuk kemampuan untuk membuat tampilan yang lebih menarik dan interaktif, serta meningkatkan efisiensi pengembangan.</p>
+    </div>
+
+    <h3 onclick="toggleContent(this)">4 Jelaskan apa saja keuntungan menggunakan Bootstrap?</h3>
+    <div class="isi">
+      <p>•	Melalui Bootstrap, pengguna dapat mengembangkan website responsif dengan mudah tanpa perlu melakukan coding dari awal. Sebelum menggunakan Bootstrap, jangan lupa untuk memastikan website kamu memiliki performa yang baik dan dapat diakses dengan cepat.</p>
+    </div>
+
+    <h3 onclick="toggleContent(this)">5.Berikan salah satu contoh penggunaan Bootstrap lalu jelaskan apa fungsinya serta berikan screenshot hasil running di web-nya!</h3>
+    <div class="isi">
+      <p>•	Fungsinya: dengan class btn btn-primary, tombol langsung punya style default Bootstrap tanpa harus bikin CSS sendiri. Warna biru menunjukkan tipe tombol utama (primary button).</p>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(el) {
+      const isi = el.nextElementSibling;
+      const tanya = confirm("Apakah Anda ingin menyembunyikan isi dari bagian ini?");
+      if (tanya) {
+        isi.style.display = isi.style.display === "none" ? "block" : "none";
+      }
+    }
+
+    function toggleMode() {
+      const body = document.body;
+      if (body.classList.contains("rapi")) {
+        body.classList.remove("rapi");
+        body.classList.add("berantakan");
+      } else {
+        body.classList.remove("berantakan");
+        body.classList.add("rapi");
+      }
+    }
+  </script>
+</body>
+</html>
